@@ -1,0 +1,217 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50vh;
+      }
+      .regalo {
+        width: 15rem;
+      }
+      .caja,
+      .mensaje {
+        position: relative;
+        margin: 0 auto;
+      }
+      .caja {
+        background-color: #b01200;
+        height: 100%;
+        border-bottom-left-radius: 5px;
+        box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.2);
+      }
+      .mensaje {
+        font-size: 24px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 200px;
+        transition: all ease-out 0.5s;
+      }
+      .mensaje p {
+        margin: 0px;
+        height: 100%;
+      }
+      .mensaje label {
+        color: #ff6468;
+        font-style: italic;
+        margin-left: 20px;
+      }
+      .caja::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -15;
+        width: 2;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-top: 300px solid #ffffff;
+        transform: skewX(177deg);
+      }
+      .caja span {
+        position: absolute;
+        display: block;
+        background: #ffffff;
+      }
+      .caja span:first-child {
+        z-index: 20;
+        top: 0px;
+        left: 60px;
+        width: 130px;
+        height: 100px;
+        background: #fffdfd;
+        z-index: 20;
+        border-radius: 0 0 30% 30%;
+        box-shadow: 5px 7px 3px rgba(0, 0, 0, 0.2);
+      }
+      .curved-span:before,
+      .curved-span:after {
+        content: "";
+        position: absolute;
+        background-color: #b01200;
+      }
+      .curved-span:before {
+        top: 0px;
+        left: 10px;
+        width: 50%;
+        height: 90%;
+        border-radius: 0 0 0 20%;
+        transform-origin: top right;
+      }
+      .curved-span:after {
+        top: 0px;
+        right: 10px;
+        width: 50%;
+        height: 90%;
+        border-radius: 0 0 20% 0;
+        transform-origin: top left;
+      }
+      .caja span:last-child {
+        width: 40px;
+        height: 100%;
+        left: 240px;
+        background: #851104;
+      }
+      .caja span:last-child::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-40%);
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 10px solid #ffffff;
+      }
+      .caja span:last-child::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-top: 300px solid #ffffff;
+        transform: skewX(0deg);
+      }
+      .conejo {
+        width: 12rem;
+      }
+      .mensaje p {
+        margin: 0px;
+      }
+      h3 {
+        color: #ff6468;
+        font-style: italic;
+        margin-left: 20px;
+      }
+      .tapa2 {
+        display: flex;
+        height: 70px;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 53px;
+      }
+      .tapa3 {
+        display: none;
+      }
+      .conejo2 {
+        height: 100%;
+      }
+      hr {
+        position: relative;
+        top: 40;
+      }
+      .tag {
+        position: absolute;
+        transform: translate(50%, 50%);
+        padding: 5px 10px;
+        background-color: #ffcc00;
+        color: #fff;
+        font-weight: bold;
+        width: 100px;
+      }
+      .I {
+        top: 180;
+      }
+      .by {
+        top: 200;
+      }
+
+      .regalo:hover .mensaje {
+        top: 0px;
+      }
+      .regalo:hover .caja {
+        height: 107%;
+      }
+      .regalo:hover hr {
+        display: none;
+      }
+      .regalo:hover .tapa2 {
+        display: none;
+      }
+      .regalo:hover .tapa3 {
+        display: flex;
+        height: 70px;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 53px;
+        background: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="regalo">
+        <div class="tapa3"></div>
+        <div class="tapa2">
+          <img class="conejo2" src="./assets/img/giphy.gif" />
+          <h3>Toca la bolsa</h3>
+        </div>
+        <hr />
+        <div class="mensaje">
+          <label>¡¡Feliz Cumpleaños Meli!!</label>
+          <p>
+            <img class="conejo" src="./assets/img/MCLl.gif" />
+          </p>
+        </div>
+        <div class="caja">
+          <span class="curved-span"></span>
+          <div class="tag I">De: Humberto</div>
+          <div class="tag by">Para: Melisa</div>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
