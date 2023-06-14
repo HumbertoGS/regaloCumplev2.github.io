@@ -166,7 +166,6 @@
       .by {
         top: 200;
       }
-
       .regalo:hover .mensaje {
         top: 0px;
       }
@@ -188,6 +187,17 @@
         top: 53px;
         background: #ffffff;
       }
+
+      @media screen and (max-width: 400px) {
+        .content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 300px !important;
+          height: 80vh;
+        }
+      }
     </style>
   </head>
   <body>
@@ -207,8 +217,11 @@
         </div>
         <div class="caja">
           <span class="curved-span"></span>
-          <div class="tag I">De: Humberto</div>
-          <div class="tag by">Para: Melisa</div>
+          <div class="tag I">
+            <d>De: Humberto</d>
+            <d>Para: Melisa</d>
+          </div>
+          <!-- <div class="tag by"></div> -->
           <span></span>
         </div>
       </div>
